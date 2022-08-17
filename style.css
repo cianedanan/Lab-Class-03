@@ -7,23 +7,27 @@ html{
     background-color: #A3BCB6;
     font-size-adjust: 0.58
 }
+
 body{
     margin: 0; 
     padding: 0;
     font-family: 'Helvetica';
     float: center;
 }
+
 main{
     width: 1500px;
     margin: 30px auto;
     min-height: 700px;
 }
+
 header{
     width: 1500px;
     margin: 30px auto;
     min-height: 300px;
 
 }
+
 h1, h2{
     font-family: facile;
     margin: 0px;
@@ -37,12 +41,14 @@ div{
     margin-left: 325px;
     position: relative;
 }
+
 h3{
     color: #DADED4;
     font-size: 50px;
     font-family: arial;
     text-align: left;
 }
+
 p{
     color:#FFFFFF;
     margin-right: 400px;
@@ -52,3 +58,22 @@ p{
     width: 800px;
 
 }
+
+article{
+    color:#FFFFFF;
+    margin-right: 400px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    width: 800px;
+
+}
+
+.list{
+    color:#FFFFFF;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+

@@ -116,7 +116,7 @@ function getName(){
   }
 
   firstQ(), secondQ(), thirdQ(), fourthQ(), fifthQ();
-
   alert('Welcome ' + name + '!');
 
 }
+
