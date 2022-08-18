@@ -14,15 +14,15 @@
   }
   
   .navbar a{
-    font-family: facile;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     float: left;
     display:block;
     width:px;
     color: #3C403D;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
     text-decoration: none;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 150%;
   }
     
@@ -30,7 +30,6 @@
     color: #FFFFFF;
     background-color: #3C403D;
     border: #3C403D;
-    border-style: solid;
     width: 100%;
     text-align: left;
   }
@@ -57,16 +56,20 @@ main{
 header{
     width: 1500px;
     margin: 10px auto;
+    margin-left: 350px;
     min-height: 300px;
-
+    position:absolute;
 }
 
 h1, h2{
+    text-shadow:2px 2px rgb(0, 0, 0);
+    -webkit-text-stroke: .0001em rgb(255, 255, 255);
     font-family: facile;
     margin: 0px;
     font-size: 180px;
     color: #3C403D;
     text-align: right;
+   
 }
 
 h3{

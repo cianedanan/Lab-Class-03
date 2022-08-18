@@ -23,7 +23,7 @@ function getName(){
     case 'no':
     //   console.log('Correct');
       alert('Correct! I was born in Japan!');
-      score = score + 1;
+      score++;
       break;
     case 'yes':
       alert('Incorrect, but nice try. I was born in Japan.');
@@ -48,7 +48,7 @@ function getName(){
     case 'no':
     //   console.log('Correct');
       alert('Correct! Im Filipino!');
-      score = score + 1;
+      score++;
       break;
     default:
       alert('Yes or no please!');
@@ -70,7 +70,7 @@ function getName(){
     case 'yes':
     //   console.log('Correct');
       alert('Correct! I would inhale anything sushi or shellfish related!');
-      score = score + 1;
+      score++;
       break;
     default:
       alert('Yes or no please!');
@@ -92,7 +92,7 @@ function getName(){
     case 'yes':
     //   console.log('Correct');
       alert('Correct! I graduated highschool in 2015.');
-      score = score + 1;
+      score++;
       break;
     default:
       alert('Yes or no please!');
@@ -111,7 +111,7 @@ function getName(){
     case 'no':
     //   console.log('Correct');
       alert('Correct! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
-      score = score + 1;
+      score++;
       break;
     case 'yes':
       alert('Incorrect, but nice try! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
@@ -136,7 +136,7 @@ function sixthQ(){
       alert('Please enter a number!');
     } else if(guess == answer){
       alert('Nice job! You guessed it!');
-      score = score + 1;
+      score++;
       i += 5;
     } else if(i >= 4){
       alert('Out of guesses! The correct number is ' + answer + '.');
@@ -167,7 +167,7 @@ function seventhQ(){
     guess = guess.toLocaleLowerCase();
     if (guess === game[0] || guess === game[1] || guess === game[2] || guess === game[3] || guess === game[4] || guess === game[5]){
       alert('Correct!');
-      score = score + 1;
+      score++;
       i += 7;
     } else{
       if(i < 6){
