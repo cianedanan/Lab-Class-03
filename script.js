@@ -161,47 +161,57 @@ function seventhQ(){
   for(let i = 1; i < 7;){
     guess = prompt('Guess one of top five game titles.');
     guess = guess.toLocaleLowerCase();
-    switch(guess){
-    case game[0], game[6]:
+    if (guess === game[0] || guess === game[1] || guess === game[2] || guess === game[3] || guess === game[4] || guess === game[5]){
       alert('Correct!');
       score = score + 1;
       i += 7;
-      break;
-    case game[1]:
-      alert('Correct!');
-      score = score + 1;
-      i += 7;
-      break;
-    case game[2]:
-      alert('Correct!');
-      score = score + 1;
-      i += 7;
-      break;
-    case game[3]:
-      alert('Correct!');
-      score = score + 1;
-      i += 7;
-      break;
-    case game[4]:
-      alert('Correct!');
-      score = score + 1;
-      i += 7;
-      break;
-    default:
+    } else{
       if(i < 6){
         alert('Good guess! Not in my top five though! You have ' + (6 - i) + ' guess(es) left!');
         i++;
       }else{
-        alert('Out of guesses!');
+        alert('Out of guess attempts!');
         i++;
       }
-      break;
     }
+    // switch(guess){
+    // case game[0], game[6]:
+    //   alert('Correct!');
+    //   score = score + 1;
+    //   i += 7;
+    //   break;
+    // case game[1]:
+    //   alert('Correct!');
+    //   score = score + 1;
+    //   i += 7;
+    //   break;
+    // case game[2]:
+    //   alert('Correct!');
+    //   score = score + 1;
+    //   i += 7;
+    //   break;
+    // case game[3]:
+    //   alert('Correct!');
+    //   score = score + 1;
+    //   i += 7;
+    //   break;
+    // case game[4]:
+    //   alert('Correct!');
+    //   score = score + 1;
+    //   i += 7;
+    //   break;
+    // default:
+    //   if(i < 6){
+    //     alert('Good guess! Not in my top five though! You have ' + (6 - i) + ' guess(es) left!');
+    //     i++;
+    //   }else{
+    //     alert('Out of guesses!');
+    //     i++;
+    //   }
+    //   break;
+    // }
   }
   alert('Possible anwers: ' + game.join(', ') + '.');
   alert('You got ' + score + '/7 answers correct.');
 }
 
-// if (guess == game[0] || guess == game[1] || guess == game[2] || guess == game[3] || guess == game[4] || guess == game[5]){
-
-// }
