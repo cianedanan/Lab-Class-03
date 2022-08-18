@@ -120,3 +120,31 @@ function getName(){
 
 }
 
+function sixthQ(){
+  let guess = null;
+  let answer = Math.floor(Math.random( )* 10 + 1);
+  for(let i = 1; i < 5;){
+    guess = prompt('Guess a number between 1 and 10.');
+    if(guess === null || guess === ''){
+      alert('Please enter a number!');
+    } else if(guess == answer){
+      alert('Nice job! You guessed it!');
+      i += 5;
+    } else if(i >= 4){
+      alert('Out of guesses! The correct number is ' + answer + '.');
+      i += 5;
+    } else if(guess > 10 || guess <= 0){
+      alert('Numbers from 1 to 10 please!');
+    } else if(guess > answer){
+      alert('Guess is too high! You have ' + (4 - i) + ' guesses left!');
+      i++;
+    } else if(guess < answer){
+      alert('Guess is too low! You have ' + (4 - i) + ' guesses left!');
+      i++;
+    } else{
+      alert('Numbers only please!');
+    }
+  }
+}
+
+
