@@ -26,7 +26,7 @@ function getName(){
       score = score + 1;
       break;
     case 'yes':
-      alert('Nice try! I was born in Japan.');
+      alert('Incorrect, but nice try. I was born in Japan.');
       break;
     default:
       alert('Yes or no please!');
@@ -43,15 +43,15 @@ function getName(){
     answer = answer.toLowerCase();
     switch(answer){
     case 'yes':
-      alert('Nice try! Im Filipino.');
+      alert('Incorrect, but nice try. Im Filipino.');
       break;
     case 'no':
     //   console.log('Correct');
-      alert('Correct. Im Filipino.');
+      alert('Correct! Im Filipino!');
       score = score + 1;
       break;
     default:
-      alert('Yes or No please!');
+      alert('Yes or no please!');
       secondQ();
     }
   }
@@ -65,15 +65,15 @@ function getName(){
     answer = answer.toLowerCase();
     switch(answer){
     case 'no':
-      alert('Nice try! I would inhale anything sushi or shellfish related.');
+      alert('Incorrect, but nice try. I would inhale anything sushi or shellfish related.');
       break;
     case 'yes':
     //   console.log('Correct');
-      alert('Correct! I would inhale anything sushi or shellfish related.!');
+      alert('Correct! I would inhale anything sushi or shellfish related!');
       score = score + 1;
       break;
     default:
-      alert('Yes or No please!');
+      alert('Yes or no please!');
       thirdQ();
     }
   }
@@ -87,15 +87,15 @@ function getName(){
     answer = answer.toLowerCase();
     switch(answer){
     case 'no':
-      alert('Nice try! I graduated highscool in 2015.');
+      alert('Incorrect, but nice try. I graduated highscool in 2015.');
       break;
     case 'yes':
     //   console.log('Correct');
-      alert('Correct. I graduated highschool in 2015.');
+      alert('Correct! I graduated highschool in 2015.');
       score = score + 1;
       break;
     default:
-      alert('Yes or No please!');
+      alert('Yes or no please!');
       fourthQ();
     }
   }
@@ -110,14 +110,14 @@ function getName(){
     switch(answer){
     case 'no':
     //   console.log('Correct');
-      alert('Correct! Attack on Titan is amazing, but Full Metal Alchemnist is my all time favorite anime.');
+      alert('Correct! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
       score = score + 1;
       break;
     case 'yes':
-      alert('Nice try! Attack on Titan is amazing, but Full Metal Alchemnist is my all time favorite anime.');
+      alert('Incorrect, but nice try! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
       break;
     default:
-      alert('Yes or No please!');
+      alert('Yes or no please!');
       fifthQ();
     }
   }
@@ -159,10 +159,10 @@ function seventhQ(){
   let game = ['breath of the wild', 'stardew valley', 'it takes two', 'skyrim' , 'portal'];
   let guess = null;
   for(let i = 1; i < 7;){
-    guess = prompt('Guess one of top five game titles.');
+    guess = prompt('Guess one of my top five video game titles.');
     while(guess === null || guess === ''){
       alert('Enter a game title please!');
-      guess = prompt('Guess one of top five game titles.');
+      guess = prompt('Guess one of my top five video game titles.');
     }
     guess = guess.toLocaleLowerCase();
     if (guess === game[0] || guess === game[1] || guess === game[2] || guess === game[3] || guess === game[4] || guess === game[5]){
@@ -171,7 +171,7 @@ function seventhQ(){
       i += 7;
     } else{
       if(i < 6){
-        alert('Good guess! Not in my top five though! You have ' + (6 - i) + ' guess(es) left!');
+        alert('Good guess. Not in my top five though. You have ' + (6 - i) + ' guess(es) left!');
         i++;
       }else{
         alert('Oops! Out of guess attempts!');
@@ -179,7 +179,7 @@ function seventhQ(){
       }
     }
   }
-  alert('Possible anwers: Breath of the Wild, Stardew Valley, It Takes Two, Skyrim, or Portal');
+  alert('Possible anwers: Breath of the Wild, Stardew Valley, It Takes Two, Skyrim, or Portal.');
   alert('You got ' + score + '/7 answers correct.');
 }
 
