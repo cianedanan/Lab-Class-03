@@ -65,11 +65,11 @@ function getName(){
     answer = answer.toLowerCase();
     switch(answer){
     case 'no':
-      alert('Nice try! Anything shellfish or sushi related will inhaled by me.');
+      alert('Nice try! I would inhale anything sushi or shellfish related.');
       break;
     case 'yes':
     //   console.log('Correct');
-      alert('Correct! Anything shellfish or sushi will be inhaled by me!');
+      alert('Correct! I would inhale anything sushi or shellfish related.!');
       score = score + 1;
       break;
     default:
@@ -156,10 +156,14 @@ function sixthQ(){
 }
 
 function seventhQ(){
-  let game = ['breath of the wild', 'stardew valley', 'it takes two', 'skyrim' , 'portal', 'botw'];
+  let game = ['breath of the wild', 'stardew valley', 'it takes two', 'skyrim' , 'portal'];
   let guess = null;
   for(let i = 1; i < 7;){
     guess = prompt('Guess one of top five game titles.');
+    while(guess === null || guess === ''){
+      alert('Enter a game title please!');
+      guess = prompt('Guess one of top five game titles.');
+    }
     guess = guess.toLocaleLowerCase();
     if (guess === game[0] || guess === game[1] || guess === game[2] || guess === game[3] || guess === game[4] || guess === game[5]){
       alert('Correct!');
@@ -170,48 +174,12 @@ function seventhQ(){
         alert('Good guess! Not in my top five though! You have ' + (6 - i) + ' guess(es) left!');
         i++;
       }else{
-        alert('Out of guess attempts!');
+        alert('Oops! Out of guess attempts!');
         i++;
       }
     }
-    // switch(guess){
-    // case game[0], game[6]:
-    //   alert('Correct!');
-    //   score = score + 1;
-    //   i += 7;
-    //   break;
-    // case game[1]:
-    //   alert('Correct!');
-    //   score = score + 1;
-    //   i += 7;
-    //   break;
-    // case game[2]:
-    //   alert('Correct!');
-    //   score = score + 1;
-    //   i += 7;
-    //   break;
-    // case game[3]:
-    //   alert('Correct!');
-    //   score = score + 1;
-    //   i += 7;
-    //   break;
-    // case game[4]:
-    //   alert('Correct!');
-    //   score = score + 1;
-    //   i += 7;
-    //   break;
-    // default:
-    //   if(i < 6){
-    //     alert('Good guess! Not in my top five though! You have ' + (6 - i) + ' guess(es) left!');
-    //     i++;
-    //   }else{
-    //     alert('Out of guesses!');
-    //     i++;
-    //   }
-    //   break;
-    // }
   }
-  alert('Possible anwers: ' + game.join(', ') + '.');
+  alert('Possible anwers: Breath of the Wild, Stardew Valley, It Takes Two, Skyrim, or Portal');
   alert('You got ' + score + '/7 answers correct.');
 }
 
