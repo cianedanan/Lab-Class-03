@@ -20,17 +20,17 @@ function getName() {
     }
     answer = answer.toLowerCase();
     switch (answer) {
-      case 'no':
-        //   console.log('Correct');
-        alert('Correct! I was born in Japan!');
-        score++;
-        break;
-      case 'yes':
-        alert('Incorrect, but nice try. I was born in Japan.');
-        break;
-      default:
-        alert('Yes or no please!');
-        firstQ();
+    case 'no':
+    //   console.log('Correct');
+      alert('Correct! I was born in Japan!');
+      score++;
+      break;
+    case 'yes':
+      alert('Incorrect, but nice try. I was born in Japan.');
+      break;
+    default:
+      alert('Yes or no please!');
+      firstQ();
     }
   }
 
@@ -42,17 +42,17 @@ function getName() {
     }
     answer = answer.toLowerCase();
     switch (answer) {
-      case 'yes':
-        alert('Incorrect, but nice try. Im Filipino.');
-        break;
-      case 'no':
-        //   console.log('Correct');
-        alert('Correct! Im Filipino!');
-        score++;
-        break;
-      default:
-        alert('Yes or no please!');
-        secondQ();
+    case 'yes':
+      alert('Incorrect, but nice try. Im Filipino.');
+      break;
+    case 'no':
+      //   console.log('Correct');
+      alert('Correct! Im Filipino!');
+      score++;
+      break;
+    default:
+      alert('Yes or no please!');
+      secondQ();
     }
   }
 
@@ -64,17 +64,17 @@ function getName() {
     }
     answer = answer.toLowerCase();
     switch (answer) {
-      case 'no':
-        alert('Incorrect, but nice try. I would inhale anything sushi or shellfish related.');
-        break;
-      case 'yes':
-        //   console.log('Correct');
-        alert('Correct! I would inhale anything sushi or shellfish related!');
-        score++;
-        break;
-      default:
-        alert('Yes or no please!');
-        thirdQ();
+    case 'no':
+      alert('Incorrect, but nice try. I would inhale anything sushi or shellfish related.');
+      break;
+    case 'yes':
+      //   console.log('Correct');
+      alert('Correct! I would inhale anything sushi or shellfish related!');
+      score++;
+      break;
+    default:
+      alert('Yes or no please!');
+      thirdQ();
     }
   }
 
@@ -86,17 +86,17 @@ function getName() {
     }
     answer = answer.toLowerCase();
     switch (answer) {
-      case 'no':
-        alert('Incorrect, but nice try. I graduated highscool in 2015.');
-        break;
-      case 'yes':
-        //   console.log('Correct');
-        alert('Correct! I graduated highschool in 2015.');
-        score++;
-        break;
-      default:
-        alert('Yes or no please!');
-        fourthQ();
+    case 'no':
+      alert('Incorrect, but nice try. I graduated highscool in 2015.');
+      break;
+    case 'yes':
+      //   console.log('Correct');
+      alert('Correct! I graduated highschool in 2015.');
+      score++;
+      break;
+    default:
+      alert('Yes or no please!');
+      fourthQ();
     }
   }
 
@@ -108,17 +108,17 @@ function getName() {
     }
     answer = answer.toLowerCase();
     switch (answer) {
-      case 'no':
-        //   console.log('Correct');
-        alert('Correct! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
-        score++;
-        break;
-      case 'yes':
-        alert('Incorrect, but nice try! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
-        break;
-      default:
-        alert('Yes or no please!');
-        fifthQ();
+    case 'no':
+      //   console.log('Correct');
+      alert('Correct! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
+      score++;
+      break;
+    case 'yes':
+      alert('Incorrect, but nice try! Attack on Titan is amazing, but Full Metal Alchemist is my all time favorite anime.');
+      break;
+    default:
+      alert('Yes or no please!');
+      fifthQ();
     }
   }
 
@@ -137,10 +137,10 @@ function sixthQ() {
     } else if (guess == answer) {
       alert('Nice job! You guessed it!');
       score++;
-      i += 5;
+      break;
     } else if (i >= 4) {
       alert('Out of guesses! The correct number is ' + answer + '.');
-      i += 5;
+      break;
     } else if (guess > 10 || guess <= 0) {
       alert('Numbers from 1 to 10 please!');
     } else if (guess > answer) {
@@ -156,35 +156,6 @@ function sixthQ() {
 }
 
 function seventhQ(){
-  let game = ['breath of the wild', 'stardew valley', 'it takes two', 'skyrim' , 'portal'];
-  let guess = null;
-  for(let i = 1; i < 7;){
-    guess = prompt('Guess one of my top five video game titles.');
-    while(guess === null || guess === ''){
-      alert('Enter a game title please!');
-      guess = prompt('Guess one of my top five video game titles.');
-    }
-    guess = guess.toLocaleLowerCase();
-    if (guess === game[0] || guess === game[1] || guess === game[2] || guess === game[3] || guess === game[4] || guess === game[5]){
-      alert('Correct!');
-      score++;
-      i += 7;
-    } else{
-      if(i < 6){
-        alert('Good guess. Not in my top five though. You have ' + (6 - i) + ' guess(es) left!');
-        i++;
-      }else{
-        alert('Oops! Out of guess attempts!');
-        i++;
-      }
-    }
-  }
-  alert('Possible anwers: Breath of the Wild, Stardew Valley, It Takes Two, Skyrim, or Portal.');
-  alert('You got ' + score + '/7 answers correct.');
-}
-
-
-function seventhQ() {
   let game = ['Breath of the Wild', 'Stardew Valley', 'It Takes Two', 'Skyrim', 'Portal'];
   let guess = null;
   for (let i = 0; i < 6; i++) {
@@ -197,8 +168,8 @@ function seventhQ() {
     guess = guess.toLowerCase();
     for (let j = 0; j < game.length; j++) {
       let banana = game[j].toLowerCase();
-      console.log(banana);
-      console.log(guess);
+      // console.log(banana);
+      // console.log(guess);
       if (guess === banana) {
         correct = true;
         score++;
@@ -208,31 +179,11 @@ function seventhQ() {
     if (correct === false) {
       alert('Good guess. Not in my top five though. You have ' + (5 - i) + ' guess(es) left!');
     } else {
-      alert('correct');
+      alert('Correct!');
       break;
     }
   }
+  alert('Possible anwers: ' + game.join(', ') + '.');
+  alert('You got ' + score + '/7 answers correct.');
 }
 
-
-
-
-/*
-if (guess === game[0] || guess === game[1] || guess === game[2] || guess === game[3] || guess === game[4] || guess === game[5]){
-  alert('Correct!');
-  score++;
-  i += 7;
-} else{
-  if(i < 6){
-    alert('Good guess. Not in my top five though. You have ' + (6 - i) + ' guess(es) left!');
-    i++;
-  }else{
-    alert('Oops! Out of guess attempts!');
-    i++;
-  }
-}
-}
-alert('Possible anwers: Breath of the Wild, Stardew Valley, It Takes Two, Skyrim, or Portal.');
-alert('You got ' + score + '/7 answers correct.');
-}
-*/
